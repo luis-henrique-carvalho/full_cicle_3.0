@@ -19,6 +19,7 @@ jobs:
         id: docker-build-push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./ci_cd
+          file: ./ci_cd/Dockerfile
           push: false
           tags: user/app:latest
